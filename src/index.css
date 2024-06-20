@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* utility class custom-border make class  */
+@layer base {
+    body {
+        @apply overflow-x-hidden;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@layer utilities {
+    .custom-rounded-border {
+        border-bottom-left-radius: 10rem;
+    }
+    .custom-glass-effect {
+        background: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(19px);
+        -webkit-backdrop-filter: blur(19px);
+        border-radius: 3rem;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .logo {
+        font-family: 'Bricolage Grotesque', sans-serif;
+    }
+    .Mont-font {
+        font-family: 'Montserrat', monospace;
+    }
+    .card-width {
+        width: 750px;
+    }
+    .result-card-width {
+        width: 1050px;
+    }
+    .lines-top {
+        top: 100%;
+    }
+    /* Loader styles */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid purple;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+    }
+}
